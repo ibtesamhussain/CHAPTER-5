@@ -1,0 +1,833 @@
+MADE BY: IBTESAM HUSSSAIN
+
+
+
+def tempreture(t):
+    "print message based on tempreture value t"
+    if t > 86:
+        print("It is hot.")
+    elif t > 32 :
+        print("It is cool.")
+    else:
+        print("It is freezing.")  
+    return""    
+print(tempreture(87))       
+print(tempreture(86))
+print(tempreture(32))
+It is hot.
+
+It is cool.
+
+It is freezing.
+
+In [14]:
+def tempreture(t):
+    "print message based on tempreture value t"
+    if 32 < t <=86 :
+        print("It is cool.")
+    elif t >86 :
+        print("It is cool.")
+    else:
+        print("It is freezing.")  
+    return""  
+print(tempreture(86))
+It is cool.
+
+In [24]:
+#practice problem 5.1
+def MyBMI(weight,height):
+    y=(weight*703)/(height**2)
+    if y < 18.5:
+        print("Underwieght.")
+    elif 18.5 <= y < 25 :
+        print("Normal.")
+    else :
+        print("Overwight")
+    return""
+print(MyBMI(190,75))
+print(MyBMI(140,75))
+Normal.
+
+Underwieght.
+
+In [25]:
+l=["Cat","Dog","Chicken"]
+for animal in l:
+    print(animal)
+Cat
+Dog
+Chicken
+In [29]:
+d="cupcake"
+for c in d:
+    if c in "aeiou":
+        print((c))
+u
+a
+e
+In [31]:
+infile=open("example.txt","r")
+for line in infile:
+    print(line,end="")
+In this video i will be showing you QCY t1 pro which are in my humble opinion one of the best mid range wireless earbuds.
+In [33]:
+for i in range(10):
+    print(i,end="  ")
+0  1  2  3  4  5  6  7  8  9  
+In [34]:
+n=10
+for i in range(n):
+    if i%2==0:
+        print(i,end=" ")
+0 2 4 6 8 
+In [36]:
+#5.2 
+def powers(n):
+    for i in range(1,n+1):
+        print(2**i,end=" ")
+    return""
+print(powers(10))
+2 4 8 16 32 64 128 256 512 1024 
+In [38]:
+pets=["cat","dog","fish","bird"]
+for animal in pets:
+    print(animal)
+for i in range(len(pets)):
+    print(pets[i])
+cat
+dog
+fish
+bird
+cat
+dog
+fish
+bird
+In [40]:
+def sorted(lst):
+    for i in range(0,len(lst)-1):
+        if lst[i]>lst[i+1]:
+            return False
+    return True
+print(sorted([1,2,3,4,5,6]))
+True
+In [44]:
+#5.3
+def arthemetic(lst):
+    if len(lst)<2:
+        return True
+    diff=lst[1]-lst[0]
+    for i in range(1,len(lst)-1):
+        if lst[i+1]-lst[i] !=diff:
+            return False
+    return True
+print(arthemetic([3,6,9,12,15]))
+print(arthemetic([3,6,9,11,14]))
+print(arthemetic([3]))
+True
+False
+True
+In [47]:
+numlist=[3,2,7,-1,9]
+mysum=0
+for number in numlist:
+    mysum=mysum+number
+print(mysum)
+mysum1=0
+for number1 in numlist:
+    mysum1+=1
+print(mysum1)   
+myprod=0
+for num in numlist:
+    myprod=myprod*num
+print(myprod)
+20
+5
+0
+In [48]:
+numlist=[3,2,7,-1,9]
+myprod=1
+for num in numlist:
+    myprod=myprod*num
+print(myprod)
+-378
+In [51]:
+#5.4
+def factorial(n):
+    "return n!"
+    res=1
+    for i in range(2,n+1):
+        res *=i
+    return res
+print(factorial(0))
+print(factorial(3))
+print(factorial(5))
+print(factorial(7))
+1
+6
+120
+5040
+In [54]:
+#5.5
+def acroynym(phrase):
+    words=phrase.split()
+    res=" "
+    for w in words:
+        res=res+w[0].upper()
+    return res
+print(acroynym("random access memory"))
+print(acroynym("central processing unit"))
+ RAM
+ CPU
+In [61]:
+#5.6
+def divisors(n):
+    res=[]
+    for i in range(1,n+1):
+        if n%i==0:
+            res.append(i)
+    return res     
+print(divisors(1))
+print(divisors(6))
+print(divisors(11))
+[1]
+[1, 2, 3, 6]
+[1, 11]
+In [64]:
+n=6
+for i in range(n):
+    print(i,end=" ")
+0 1 2 3 4 5 
+In [66]:
+n=6
+for j in range(n):
+    for i in range(n):
+        print(i,end=" ")
+0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 0 1 2 3 4 5 
+In [71]:
+def nested(n):
+    for j in range(n):
+        for i in range(n):
+            print(i,end=" ")
+        print()   
+print(nested(5))
+0 1 2 3 4 
+0 1 2 3 4 
+0 1 2 3 4 
+0 1 2 3 4 
+0 1 2 3 4 
+None
+In [73]:
+#5.7
+def xmult(x,y):
+    l=[]
+    for i in x:
+        for j in y:
+            print(i*j)
+            l.append(i*j)
+    return l       
+print(xmult([2],([1,5])))
+2
+10
+[2, 10]
+In [74]:
+def nested2(n):
+    for j in range(n):
+        for i in range(j+1):
+            print(i,end=" ")
+        print()
+print(nested2(4))
+0 
+0 1 
+0 1 2 
+0 1 2 3 
+None
+In [83]:
+#5.8
+def bubblesort(lst):
+    for i in range(len(lst)-1,0,-1):
+        for j in range(i):
+            if lst[j+1] < lst[j]:
+                lst[j],lst[j+1]=lst[j+1],lst[j]
+
+print(bubblesort([3,1,7,4,9,2,5]))
+None
+In [89]:
+t=[[1,2,3],[3,5,6],[7,8,9]]
+print(t)
+print(t[0])
+print(t[0][1])#row 2 column 0
+for row in t:
+    print(row)
+[[1, 2, 3], [3, 5, 6], [7, 8, 9]]
+[1, 2, 3]
+2
+[1, 2, 3]
+[3, 5, 6]
+[7, 8, 9]
+In [91]:
+def print2D(t):
+    for row in t:
+        for item in row:
+            print(item,end=" ")
+        print()
+print(print2D([[1,2,3],[3,5,7],[7,8,9]]))
+1 2 3 
+3 5 7 
+7 8 9 
+None
+In [97]:
+def ince2D(t):
+    nrows=len(t)
+    ncols=len(t[0])
+    for i in range(nrows):
+        for j in range(ncols):
+            t[i][j] += 1
+print(ince2D([[1,2,3],[3,4,5],[6,7,8]]))
+None
+In [103]:
+#5.9
+def add2D(t1,t2):
+    nrows=len(t1)
+    ncols=len(t1[0])
+    for i in range(nrows):
+        for j in range(ncols):
+            t1[i][j] += t2[i][j]    
+t=[[4,7,2,5],[5,1,9,2],[8,3,6,6]]
+s=[[0,1,2,0],[0,1,1,1],[0,1,0,0]]
+print(add2D(t,s))  
+for row in t:
+    print(row)
+None
+[4, 8, 4, 5]
+[5, 2, 10, 3]
+[8, 4, 6, 6]
+In [98]:
+#5.10
+def interest(rate,x):
+    amount=x
+    count=0
+    while amount<200:
+        count +=1
+        amount +=amount*rate
+    return count
+print(interest(0.6,100))
+2
+In [116]:
+def fibonacci(bound):
+    previous=1
+    current=1
+    while current <= bound:
+        previous,current=current,previous+current
+    return current 
+print(fibonacci(9))
+print(fibonacci(8))
+print(fibonacci(7))
+13
+13
+8
+In [118]:
+#5.11
+def approx(error):
+    prev=1
+    current=2
+    i = 2
+    while current-prev>error:
+        prev=current
+        current=prev+(1/factorial(i))
+        i += 1
+    return current
+print(approx(33))
+print(approx(0))
+2
+2.7182818284590455
+In [125]:
+#exercise 
+def test(x):
+    if x>0:
+        print("positive",x)
+    elif x<0:
+        print("negative",x)
+    elif x==0 :
+        print("Zero")
+    return""   
+print(test(3))        
+print(test(-3))
+positive 3
+
+negative -3
+
+In [133]:
+#5.14
+def mult3(list):
+    for n in list:
+        if n%3==0:
+            print(n)
+print(mult3([3,6,8,9,12,14]))
+3
+6
+9
+12
+None
+In [135]:
+#5.15
+def vowels(string):
+    for i in range(0,len(string)):
+        if string[i] in "aeiouAEIOU":
+            print(i)
+print(vowels("Waqar"))
+1
+3
+None
+In [141]:
+#5.16
+def indexes(string,char):
+    l=[]
+    for index,i in enumerate(string):
+        if i==char:
+            l.append(index)
+    return l
+print(indexes("Mississipi","s"))
+print(indexes("Mississipi","i"))
+print(indexes("mississipi","a"))
+[2, 3, 5, 6]
+[1, 4, 7, 9]
+[]
+In [142]:
+#5.17
+def doubles(lst):
+    if len(lst)>1:
+        for i in range(1,len(lst)):
+            if(lst[i]==2*lst[i-1]):
+                print(lst[i])
+print(doubles([3,0,1,2,3,6,2,4,5,6,5]))
+2
+6
+4
+None
+In [143]:
+#5.18
+def Four_letter(words):
+    answer=[]
+    for word in words:
+        if len(word)==4:
+            answer.append(word)
+    return answer
+print(Four_letter(["dog","fish","Stop","Bus","Dust"]))
+['fish', 'Stop', 'Dust']
+In [147]:
+#5.19
+def inBoth(l1,l2):
+    for item in l1:
+        for item2 in l2:
+            if item==item2:
+                return True
+    return False
+print(inBoth([3,2,4,5],[3,2,6,7]))
+True
+In [148]:
+#5.20
+def intersect(l1,l2):
+    answer=[]
+    for item in l1:
+        for item1 in l2:
+            if item==item1:
+                answer.append(item1)
+    return answer
+print(intersect([3,5,4,6],[4,7,8,6]))
+[4, 6]
+In [149]:
+#5.21
+def pair(l1,l2,n):
+    for item1 in l1:
+        for item2 in l2:
+            if item1 + item2 == n:
+                print(item1,item2)
+print(pair([1,2,4,5],[4,5,6,7],9))
+2 7
+4 5
+5 4
+None
+In [154]:
+#5.22
+def pairsum(lst,n):
+    for i in range(0,len(lst)):
+        for j in range(i+1,len(lst)):
+            if lst[i]+lst[j]==n:
+                print(i,j)
+print(pairsum([7,8,5,3,4,6],11))
+0 4
+1 3
+2 5
+None
+In [168]:
+#5.23
+def pay(wage,hours):
+    if hours <= 40:
+        return hours*wage
+    elif hours <= 60:
+        (hours-40)*1.5*wage +40*wage
+    else:
+        return (hours-60)*2*wage+(20*1.5*wage)+40*wage
+print(pay(10,35))   
+print(pay(10,40))
+print(pay(10,61))
+350
+400
+720.0
+In [170]:
+#5.24
+def case(string):
+    if string[0]>="A" and string[0]<="Z":
+        return "Capitalized"
+    elif string[0]>="a" and string[0]<="z":
+        return "Not capatilized"
+    else:
+        return "Unknown"
+print(case("Android"))    
+print(case("3M"))
+Capitalized
+Unknown
+In [173]:
+#5.25
+def leap(year):
+    if year%4==0 and (year%100 !=0) or (year%400 == 0):
+        return True
+    return False
+print(leap(1600))
+print(leap(1700))
+print(leap(2000))
+True
+False
+True
+In [176]:
+#5.26
+def Rockps(p1,p2):
+    if p1==p2:
+        return 0
+    elif (p1=="R" and p2== "S") or (p1=="S" and p2=="P") or (p1=="P" and p2=="R"):
+        return -1
+    else:
+        return 1
+
+print(Rockps("R","P")) 
+print(Rockps("R","S"))
+print(Rockps("S","S"))
+1
+-1
+0
+In [183]:
+#5.27
+def letter2number(grade):
+    num=4 -(ord(grade[0])-ord("A"))
+    if len(grade)>1:
+        if grade[1]=="+":
+            num += 0.3
+        else:
+            num -= 0.3
+    return num
+print(letter2number("A-"))
+print(letter2number("A"))
+3.7
+4
+In [191]:
+#5.28
+def geometric(lst):
+    if len(lst) <= 1:
+        return True 
+    ratio =lst[1]/lst[0]
+    for i in range(1,len(lst)):
+        if lst[i]/lst[i-1] != ratio:
+            return False
+    return True
+print(geometric([2,4,8,16,32,64,128,256]))    
+print(geometric([2,4,6,8]))
+True
+False
+In [1]:
+#5.29
+def lastfirst(names):
+    last,first=[],[]
+    for name in  names:
+        temp_last,temp_first=name.split(",")
+        last.append(temp_last)
+        first.append(temp_first)
+    answer=[first,last]
+    return answer
+print(lastfirst(["Gerber,Len","Fox,Kate","Dunn,Bob"]))
+[['Len', 'Kate', 'Bob'], ['Gerber', 'Fox', 'Dunn']]
+In [10]:
+#5.30
+def many(file):
+    temp=[]
+    with open(file,'r') as f:
+        for line in f:
+            temp+=map(lambda x : x.strip(',?.'),line.split())
+            dict={}
+            for word in temp:
+                if len(word) not in dict:
+                    dict[len(word)]=1
+                else:
+                    dict[len(word)]+=1
+            for x in dict:
+                print("Words of length",x," :- ",dict[x])
+    return           
+print(many("example.txt"))
+Words of length 2  :-  6
+Words of length 4  :-  3
+Words of length 5  :-  3
+Words of length 1  :-  1
+Words of length 7  :-  3
+Words of length 3  :-  7
+Words of length 6  :-  1
+Words of length 8  :-  1
+None
+In [16]:
+#5.31
+def subsetsum(x,y):
+    for i in range(0,len(x)):
+        for j in range(i,len(x)):
+            for k in range(j,len(x)):
+                if x[i]+x[j]+x[k]==y:
+                    return True
+    return False           
+print(subsetsum([5,4,10,20,15,19],38))    
+print(subsetsum([5,4,10,20,15,19],10))
+True
+False
+In [21]:
+#5.32
+def fib(n):
+    if n<1:
+        return 1
+    n0=1
+    n1=1
+    for i in range(1,n):
+        n1=n1+n0
+        n0=n1-n0
+    return n1
+print(fib(3))
+print(fib(5))
+print(fib(6))
+3
+8
+13
+In [23]:
+#5.33
+def mystery(n):
+    answer=0
+    while n >1:
+        answer+=1
+        n=int(n/2)
+    return answer
+print(mystery(8))
+3
+In [30]:
+#5.34
+def statement(x):
+    deposit=0
+    withdrawl=0
+    for n in x:
+        if n>0:
+            deposit +=n
+        else:
+            withdrawl+=n
+    return (deposit,withdrawl)        
+print(statement([30.95,-15.67,45.56,-55.00,43.78]))
+(120.29, -70.67)
+In [34]:
+#5.35
+def pixels(x):
+    answer=0
+    for i in range(0,len(x)):
+        for j in range(0,len(x[0])):
+            if x[i][j]>0:
+                answer +=1
+    return answer
+print(pixels([[0,156,0,0],[34,0,0,0],[23,123,0,34]]))
+5
+In [37]:
+#5.36
+def prime(x):
+    if x<2:
+        return False
+    elif x==2:
+        return True
+    else:
+        for i in range(2,x):
+            if (x%i==0):
+                return False
+    return True
+print(prime(3))
+True
+In [4]:
+#5.37
+def mssl(x):
+    max=0
+    for i in range(0,len(x)):
+        for j in range(i+1,len(x)+1):
+            if sum (x[i:j])>max:
+                max=sum(x[i:j])
+    if max<0:
+        max=0
+    return max
+print(mssl([1]))
+print(mssl([4,-2,-8,5,-2,7,7,2,-6,5]))
+1
+19
+In [6]:
+#5.38
+def collatz(n):
+    print(int(n))
+    while n != 1:
+        if n%2==0:
+            n=n/2
+        else:
+            n=3*n+1
+        print(int(n))
+print(collatz(10))
+10
+5
+16
+8
+4
+2
+1
+None
+In [9]:
+#5.39
+def exclamation(string):
+    answer=""
+    for i in range(0,len(string)):
+        if string[i] in "aeiouAEIOU":
+            answer = answer +4*string[i]
+        else:
+            answer= answer+ string[i]
+    answer += "!"
+    return answer
+print(exclamation("argh"))
+aaaargh!
+In [1]:
+#5.40
+def approxPi(error):
+    pi=4/1
+    i=3
+    term=-4/i
+    while abs(term)>error:
+        pi = pi+term
+        term = -term*i/(i+2)
+        i = i+2
+    pi = pi + term
+    return pi
+print(approxPi(0.01))
+print(approxPi(0.0000001))
+3.146567747182955
+3.141592703589814
+In [2]:
+#5.41
+def poly(lst,x):
+    polyx=1
+    answer=0
+    for a in lst:
+        answer += polyx*a
+        polyx *= x
+    return answer
+print(poly([1,2,1],2))
+9
+In [3]:
+#5.42
+def primeFac(n):
+    answer=[]
+    prime=2
+    while n !=1:
+        if n%prime==0:
+            answer.append(prime)
+            n=n/prime
+        else:
+            prime +=1
+    return answer
+print(primeFac(72))
+[2, 2, 2, 3, 3]
+In [4]:
+#5.43
+def evenrow(x):
+    for row in x:
+        if sum(row)%2!=0:
+            return False
+    return True 
+print(evenrow([[1,3],[2,4],[0,6]]))
+True
+In [5]:
+#5.44
+def encrypt(cipher,text):
+    table=str.maketrans("0123456789",cipher)
+    return text.translate(table)
+print(encrypt("3941068257","132"))
+914
+In [7]:
+#5.45
+def avgavg(grade):
+    grades=[]
+    for student in grade:
+        grades.append(sum(student)/len(student))
+    print(grades)
+    print(sum(grades)/len(grades))
+    return""
+print(avgavg([[95,92,86],[66,75,54],[89,72,100],[34,0,0]]))
+[91.0, 65.0, 87.0, 11.333333333333334]
+63.583333333333336
+
+In [9]:
+#5.46
+def inversions(s):
+    inversion=0
+    for i in range(0,len(s)):
+        for j in range(i,len(s)):
+            if s[i]>s[j]:
+                inversion +=1
+    return inversion
+print(inversions("ABBFHDL"))
+2
+In [10]:
+#5.47
+def d2x(n,x):
+    i=0
+    while(n//(x**i)!=0):
+        i+=1
+    answer=""
+    while i !=0:
+        i -= 1
+        answer +=str(n//(x**i))
+        n=n%(x**i)
+    return(answer)
+print(d2x(10,2))
+1010
+In [14]:
+#5.48
+def sublist(lst1,lst2):
+    i=0
+    check = False 
+    for n in lst1:
+        while i<len(lst2):
+            if lst2[i]==n:
+                i=i+1
+                check= True
+                break
+            else:
+                i=i+1
+                check=False
+        if check==False:
+            return False
+    return True 
+print(sublist([15,1,100],[20,15,30,20,5,1,100]))
+True
+In [15]:
+#5.49
+def heron(n,error):
+    prev=1.0
+    new=(prev+(n/prev))/2
+    while abs(new-prev)>error:
+        prew=new
+        new=(prev+(n/prev))/2
+    return new
+print(heron(4.0,5.0))
+2.5
